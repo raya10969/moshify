@@ -11,8 +11,6 @@
 *,
 *::after, 
 *::before {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -120,6 +118,7 @@ a {
 
 .badge--small {
     font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -137,6 +136,7 @@ a {
 
 .list{
     list-style: none;
+    padding-left: 0;
     color: var(--color-headings);
 }
 
@@ -292,7 +292,8 @@ a {
 .card {
     border-radius: 7px;
     box-shadow: 0 0 20px 10px #f3f3f3;
-    overflow: hidden;  /* heaer 的背景会覆盖圆角 */
+    /* header 的背景会覆盖圆角 */
+    overflow: hidden;  /* 需要放在容器里面才会生效 */
 }
 
 .card__header, 
@@ -308,4 +309,70 @@ a {
 .card--secondary .card__header {
     background-color: var(--color-secondary);
     color: #fff;
+}
+
+.card--secondary .badge--secondary {
+    background-color: #02CDF1;
+}
+
+
+/* Plans */
+
+.plan__name {
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.plan__price {
+    font-size: 6rem;
+}
+
+.plan__billing-cycle {
+    font-size: 2.4rem;
+    font-weight: 300;
+    opacity: 0.8; /* 不透明度 */
+    margin-right: 1rem;  /* 与 badge 之间的距离 */
+}
+
+.plan__description {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px; 
+    display: block;
+}
+
+.plan .list__item {
+    margin-bottom: 2rem;
+}
+
+.plan--popular .card__header{
+    position: relative;
+}
+
+.plan--popular .card__header::before {
+    content: url(../img/popular.svg);
+    width: 40px;
+    display: inline-block;
+    position: absolute; /* 需要把 parent 设置为 reletive position */
+    top: -6px;
+    right: 5%;
+}
+
+@media screen and (min-width: 1024px) {
+    .plan__name {
+        font-size: 1.4rem;
+    }
+
+    .plan__price {
+        font-size: 5rem;
+    }
+
+    .plan__billing-cycle {
+        font-size: 1.6rem;
+    }
+
+    .plan__description {
+        font-size: 1.7rem;
+    }
 }
