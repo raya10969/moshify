@@ -6,9 +6,12 @@
     --color-body: #918ca4;
 }
 
-* {
+*,
+*::after, 
+*::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -16,7 +19,6 @@
 
 html{
     font-size: 62.5%;
-    box-sizing: border-box;
 }
 
 body{
@@ -170,11 +172,77 @@ a {
 }
 
 .icon-container {
+    align-items: center;
     background: #f3f9fa;
-    width: 64px;
-    height: 64px;
     border-radius: 100%;
     display: inline-flex;
+    height: 64px;
     justify-content: center;
-    align-items: center;
+    width: 64px;
+}
+
+
+/* Buttons */
+
+.btn {
+    background-color: #fff;
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;  /* 鼠标指针 */
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;   /* 不换行 */
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: #0c77fa;
+}
+
+.btn--secondary {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.btn--secondary:hover {
+    background-color: #0dd4f7;
+}
+
+.btn--accent {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+.btn--accent:hover {
+    background-color: #f03f12;
+}
+
+.btn--outline {
+    border: 3px solid var(--color-headings);
+    color: var(--color-headings);
+}
+
+.btn--outline:hover {
+    background-color: var(--color-headings);
+    color: #ffffff;
+}
+
+.btn--block {
+    width: 100%;
+    /* a 元素的 display 默认是 inline，不改成 block 的话，width: 100%; 不会起作用 */
+    display: block;  
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        font-size: 1.5rem;
+    }
 }
