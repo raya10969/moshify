@@ -4,6 +4,7 @@
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-body-darker: #5c5577;
     --color-border: #ccc;
     --border-radius: 30px;
 }
@@ -378,6 +379,7 @@ a {
 }
 
 
+/* Media */
 .media {
     display: flex;
 }
@@ -392,4 +394,55 @@ a {
 
 .media__image {
     margin-top: 1rem;
+}
+
+
+/* Quote */
+.quote {
+    font-size: 3rem;
+    font-style: italic;
+    color: var(--color-body-darker);
+    line-height: 1.3;
+}
+
+.quote__text::before {
+    /* 上引号 */
+    content: open-quote; 
+}
+
+.quote__text::after {
+    /* 下引号 */
+    content: close-quote; 
+}
+
+.quote__line {
+    margin-top: 0;
+}
+
+.quote__author {
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.quote__company {
+    font-size: 2rem;
+    font-style: normal;
+    /* 不透明度 */
+    opacity: 0.4;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .quote {
+        font-size: 2rem;
+    }
+
+    .quote__author {
+        font-size: 2.4rem;
+    }
+
+    .quote__company {
+        font-size: 1.6rem;
+    }
 }
