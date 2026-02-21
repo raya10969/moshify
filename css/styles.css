@@ -20,6 +20,10 @@
     margin: 0 auto;
 }
 
+.image {
+    width: 100%;
+}
+
 
 /* Typography */
 
@@ -759,9 +763,6 @@ a {
     margin: 2rem 0 5rem;
 }
 
-.hero__image {
-    width: 100%;
-}
 
 @media screen and (min-width: 768px) {
     .hero {
@@ -813,4 +814,27 @@ a {
 .block-plans .card {
     max-width: 480px;
     margin: 0 auto;
+}
+
+
+/* Features */
+.features {
+    gap: 4rem 2rem;
+    margin: 12rem 0;
+    align-items: center;
+}
+
+.features:first-of-type {
+    margin-top: 6rem;
+}
+
+.features__heading {
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .features:nth-of-type(even) .features__content {
+        /* content's order is now the second element of the feature */
+        order: 2; 
+    }
 }
