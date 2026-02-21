@@ -6,7 +6,7 @@
     --color-body: #918ca4;
     --color-body-darker: #5c5577;
     --color-border: #ccc;
-    --border-radius: 30px;
+    --border-radius: 40px;
 }
 
 *,
@@ -208,16 +208,25 @@ a {
 
 .btn {
     background-color: #fff;
-    border-radius: 40px;
+    border-radius: var(--border-radius);
     border: 0;
     cursor: pointer;  /* 鼠标指针 */
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
+    outline: 0;
     padding: 2rem 3rem;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;   /* 不换行 */
+}
+
+.btn .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.7rem;
+    /* 子元素在父元素中的对齐方式 */
+    vertical-align: middle; 
 }
 
 .btn--primary {
@@ -276,14 +285,13 @@ a {
 
 
 /* Inputs */
-
 .input {
-    padding: 1.5rem 3.5rem;
-    border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
-    outline: 0; /* Input 的外边框 */
+    border: 1px solid var(--color-border);
     color: var(--color-headings);
     font-size: 2rem;
+    outline: 0; /* Input 的外边框 */
+    padding: 1.5rem 3.5rem;
 }
 
 ::placeholder {
@@ -299,6 +307,10 @@ a {
 .input-group .input {
     border: 0;
     flex-grow: 1; /* grow to take up all the available space */
+    min-width: 0; /* allow flex items to shrink below their content size */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .input-group .btn {
@@ -734,5 +746,36 @@ a {
     .hero__content {
         text-align: left;
         align-self: center;
+    }
+}
+
+
+/* Domain Block */
+.block-domain .input-group {
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    margin: 4rem auto;
+    max-width: 700px;
+}
+
+.block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 730px;
+    margin: 0 auto;
+}
+
+.block-domain__prices > li {
+    margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .block-domain__prices {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        font-size: 1.5rem;
     }
 }
