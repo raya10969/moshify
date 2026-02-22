@@ -665,10 +665,11 @@ a {
 
 .block__header {
     text-align: center;
+    margin-bottom: 4rem;
 }
 
-.block__heading {
-    margin-top: 0;
+.block__header > p{
+    margin-top: 1.5rem;
 }
 
 .block--dark {
