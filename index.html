@@ -25,14 +25,11 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <script>
-      const spriteUrl = new URL('./public/sprite.svg',import.meta.url);
-    </script>
     <header>
       <nav class="nav collapsible">
         <a class="nav__brand" href="/"><img src="img/logo.svg" alt="logo" /></a>
         <svg class="icon icon--white nav__toggler">
-          <use href="${spriteUrl}#menu"></use>
+          <use data-icon="menu"></use>
         </svg>
         <ul class="list nav__list collapsible__content">
           <li class="nav__item"><a href="#">Hosting</a></li>
@@ -80,7 +77,7 @@
         />
         <button class="btn btn--accent">
           <svg class="icon icon--white">
-            <use href="${spriteUrl}#search"></use>
+            <use data-icon="search"></use>
           </svg>
           Search
         </button>
@@ -170,7 +167,7 @@
         <div class="features__content" data-aos="fade-right">
           <span class="icon-container">
             <svg class="icon icon--primary">
-              <use href="${spriteUrl}#easy"></use>
+              <use data-icon="easy"></use>
             </svg>
           </span>
           <h3 class="features__heading">Super Easy to Use</h3>
@@ -197,7 +194,7 @@
         <div class="features__content" data-aos="fade-left">
           <span class="icon-container">
             <svg class="icon icon--primary">
-              <use href="${spriteUrl}#computer"></use>
+              <use data-icon="computer"></use>
             </svg>
           </span>
           <h3 class="features__heading">Simply fast websites</h3>
@@ -228,7 +225,7 @@
         <div class="features__content" data-aos="fade-right">
           <span class="icon-container">
             <svg class="icon icon--primary">
-              <use href="${spriteUrl}#settings"></use>
+              <use data-icon="settings"></use>
             </svg>
           </span>
           <h3 class="features__heading">WordPress made easy</h3>
@@ -272,7 +269,7 @@
           <li class="list__item media">
             <div class="media__image">
               <svg class="icon icon--primary">
-                <use href="${spriteUrl}#snap"></use>
+                <use data-icon="snap"></use>
               </svg>
             </div>
             <div class="media__body">
@@ -287,7 +284,7 @@
           <li class="list__item media">
             <div class="media__image">
               <svg class="icon icon--primary">
-                <use href="${spriteUrl}#growth"></use>
+                <use data-icon="growth"></use>
               </svg>
             </div>
             <div class="media__body">
@@ -302,7 +299,7 @@
           <li class="list__item media">
             <div class="media__image">
               <svg class="icon icon--primary">
-                <use href="${spriteUrl}#computer"></use>
+                <use data-icon="computer"></use>
               </svg>
             </div>
             <div class="media__body">
@@ -332,7 +329,7 @@
             <img src="img/testimonial.jpg" alt="A happy, smiling customer." />
             <span class="icon-container icon-container--accent">
               <svg class="icon icon--white icon--small">
-                <use href="${spriteUrl}#quotes"></use>
+                <use data-icon="quotes"></use>
               </svg>
             </span>
           </div>
@@ -347,7 +344,7 @@
               <div class="media">
                 <div class="media__image quote__line">
                   <svg class="icon icon--primary">
-                    <use href="${spriteUrl}#line"></use>
+                    <use data-icon="line"></use>
                   </svg>
                 </div>
                 <div class="media__body">
@@ -382,7 +379,7 @@
           <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">products</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use href="${spriteUrl}#chevron"></use>
+              <use data-icon="chevron"></use>
             </svg>
           </div>
           <div class="collapsible__content">
@@ -399,7 +396,7 @@
           <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">company</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use href="${spriteUrl}#chevron"></use>
+              <use data-icon="chevron"></use>
             </svg>
           </div>
           <div class="collapsible__content">
@@ -418,7 +415,7 @@
           <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">support</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use href="${spriteUrl}#chevron"></use>
+              <use data-icon="chevron"></use>
             </svg>
           </div>
           <div class="collapsible__content">
@@ -436,7 +433,7 @@
           <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">domains</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use href="${spriteUrl}#chevron"></use>
+              <use data-icon="chevron"></use>
             </svg>
           </div>
           <div class="collapsible__content">
@@ -455,7 +452,7 @@
         </div>
       </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

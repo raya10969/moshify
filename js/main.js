@@ -4,3 +4,8 @@ collapsibles.forEach((item) =>
     this.classList.toggle("collapsible--expanded");
   })
 );
+
+const spriteUrl = new URL("./img/sprite.svg", import.meta.url);
+document.querySelectorAll("use[data-icon]").forEach(el => {
+  el.setAttribute("href", `${spriteUrl}#${el.dataset.icon}`);
+});
