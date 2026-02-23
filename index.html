@@ -25,11 +25,14 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <script>
+      const spriteUrl = new URL('./public/sprite.svg',import.meta.url);
+    </script>
     <header>
       <nav class="nav collapsible">
         <a class="nav__brand" href="/"><img src="img/logo.svg" alt="logo" /></a>
         <svg class="icon icon--white nav__toggler">
-          <use href="img/sprite.svg#menu"></use>
+          <use href="${spriteUrl}#menu"></use>
         </svg>
         <ul class="list nav__list collapsible__content">
           <li class="nav__item"><a href="#">Hosting</a></li>
@@ -77,7 +80,7 @@
         />
         <button class="btn btn--accent">
           <svg class="icon icon--white">
-            <use href="img/sprite.svg#search"></use>
+            <use href="${spriteUrl}#search"></use>
           </svg>
           Search
         </button>
@@ -167,7 +170,7 @@
         <div class="features__content" data-aos="fade-right">
           <span class="icon-container">
             <svg class="icon icon--primary">
-              <use href="img/sprite.svg#easy"></use>
+              <use href="${spriteUrl}#easy"></use>
             </svg>
           </span>
           <h3 class="features__heading">Super Easy to Use</h3>
@@ -194,7 +197,7 @@
         <div class="features__content" data-aos="fade-left">
           <span class="icon-container">
             <svg class="icon icon--primary">
-              <use href="img/sprite.svg#computer"></use>
+              <use href="${spriteUrl}#computer"></use>
             </svg>
           </span>
           <h3 class="features__heading">Simply fast websites</h3>
@@ -225,7 +228,7 @@
         <div class="features__content" data-aos="fade-right">
           <span class="icon-container">
             <svg class="icon icon--primary">
-              <use href="img/sprite.svg#settings"></use>
+              <use href="${spriteUrl}#settings"></use>
             </svg>
           </span>
           <h3 class="features__heading">WordPress made easy</h3>
@@ -269,7 +272,7 @@
           <li class="list__item media">
             <div class="media__image">
               <svg class="icon icon--primary">
-                <use href="img/sprite.svg#snap"></use>
+                <use href="${spriteUrl}#snap"></use>
               </svg>
             </div>
             <div class="media__body">
@@ -284,7 +287,7 @@
           <li class="list__item media">
             <div class="media__image">
               <svg class="icon icon--primary">
-                <use href="img/sprite.svg#growth"></use>
+                <use href="${spriteUrl}#growth"></use>
               </svg>
             </div>
             <div class="media__body">
@@ -299,7 +302,7 @@
           <li class="list__item media">
             <div class="media__image">
               <svg class="icon icon--primary">
-                <use href="img/sprite.svg#computer"></use>
+                <use href="${spriteUrl}#computer"></use>
               </svg>
             </div>
             <div class="media__body">
@@ -329,7 +332,7 @@
             <img src="img/testimonial.jpg" alt="A happy, smiling customer." />
             <span class="icon-container icon-container--accent">
               <svg class="icon icon--white icon--small">
-                <use href="img/sprite.svg#quotes"></use>
+                <use href="${spriteUrl}#quotes"></use>
               </svg>
             </span>
           </div>
@@ -344,7 +347,7 @@
               <div class="media">
                 <div class="media__image quote__line">
                   <svg class="icon icon--primary">
-                    <use href="img/sprite.svg#line"></use>
+                    <use href="${spriteUrl}#line"></use>
                   </svg>
                 </div>
                 <div class="media__body">
@@ -379,7 +382,7 @@
           <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">products</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use href="img/sprite.svg#chevron"></use>
+              <use href="${spriteUrl}#chevron"></use>
             </svg>
           </div>
           <div class="collapsible__content">
@@ -396,7 +399,7 @@
           <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">company</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use href="img/sprite.svg#chevron"></use>
+              <use href="${spriteUrl}#chevron"></use>
             </svg>
           </div>
           <div class="collapsible__content">
@@ -415,7 +418,7 @@
           <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">support</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use href="img/sprite.svg#chevron"></use>
+              <use href="${spriteUrl}#chevron"></use>
             </svg>
           </div>
           <div class="collapsible__content">
@@ -433,7 +436,7 @@
           <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">domains</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use href="img/sprite.svg#chevron"></use>
+              <use href="${spriteUrl}#chevron"></use>
             </svg>
           </div>
           <div class="collapsible__content">
