@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Deploy your web set in less than 60 seconds"
+    />
+    <!-- Open Graphy: 在社交媒体中分享时的显示情况 -->
+    <meta property="og:title" content="Moshify..." />
+    <meta property="og:description" content="Moshify..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://..." />
+    <meta property="og:url" content="http://moshified.com" />
+    <title>Moshify - Go Online for Just $9</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,18 +22,366 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..700;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <header>
+      <nav class="nav collapsible">
+        <a class="nav__brand" href="/"><img src="img/logo.svg" alt="logo" /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="img/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Hosting</a></li>
+          <li class="nav__item"><a href="#">Vps</a></li>
+          <li class="nav__item"><a href="#">Domain</a></li>
+          <li class="nav__item"><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="block block--dark block--skewed-left">
+      <div class="container grid grid--1x2">
+        <header class="block__header hero__content" data-aos="fade-right">
+          <h1 class="block__heading">Cloud Hosting for Pros</h1>
+          <p class="hero__tagline">
+            Deloy your websites in less than 60 seconds.
+          </p>
+          <a href="" class="btn btn--accent btn--stretched">Get Started</a>
+        </header>
+        <picture data-aos="zoom-in-left">
+          <source
+            type="image/webp"
+            srcset="img/banner.webp 1x, img/banner@2x.webp 2x"
+          />
+          <source
+            type="image/png"
+            srcset="img/banner.png 1x, img/banner@2x.png 2x"
+          />
+          <img class="image" src="img/banner.png" alt="" />
+        </picture>
+      </div>
+    </section>
+    <section class="block container block-domain" data-aos="fade-up">
+      <header class="block__header">
+        <h2>Starting at $9 per month</h2>
+        <p>
+          create mode 100644 img/banner.webp create mode 100644
+          img/banner@2x.png create mode 100644 img/banner@2x.webp
+        </p>
+      </header>
+      <div class="input-group">
+        <input
+          type="text"
+          class="input"
+          placeholder="Enter domain name here..."
+        />
+        <button class="btn btn--accent">
+          <svg class="icon icon--white">
+            <use href="img/sprite.svg#search"></use>
+          </svg>
+          Search
+        </button>
+      </div>
+      <ul class="list block-domain__prices">
+        <li><span class="badge badge--secondary">.com $9</span></li>
+        <li>.sg $10</li>
+        <li>.space $11</li>
+        <li>.info $14</li>
+        <li>.net $10</li>
+        <li>.xyz $10</li>
+      </ul>
+    </section>
+    <section class="block container block-plans" data-aos="fade-up">
+      <div class="grid grid--1x3">
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <span class="plan__price">$14</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--secondary badge--small">10 % OFF</span>
+              <span class="plan__description">Easy start on the cloud</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Unlimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB RAM</li>
+              </ul>
+              <button class="btn btn--outline btn--block">buy now</button>
+            </div>
+          </div>
+        </div>
+        <div class="plan plan--popular">
+          <div class="card card--primary">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <span class="plan__price">$14</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--primary badge--small">10 % OFF</span>
+              <span class="plan__description">Easy start on the cloud</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Unlimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB RAM</li>
+              </ul>
+              <button class="btn btn--outline btn--block">buy now</button>
+            </div>
+          </div>
+        </div>
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">Entry</h3>
+              <span class="plan__price">$14</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--secondary badge--small">10 % OFF</span>
+              <span class="plan__description">Easy start on the cloud</span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">Unlimited Websites</li>
+                <li class="list__item">Unlimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB RAM</li>
+              </ul>
+              <button class="btn btn--outline btn--block">buy now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block container">
+      <header class="block__header">
+        <h2>Host On The Cloud to Keep Growing</h2>
+        <p>
+          Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+          maecenas accumsan.
+        </p>
+      </header>
+      <article class="grid grid--1x2 features">
+        <div class="features__content" data-aos="fade-right">
+          <span class="icon-container">
+            <svg class="icon icon--primary">
+              <use href="img/sprite.svg#easy"></use>
+            </svg>
+          </span>
+          <h3 class="features__heading">Super Easy to Use</h3>
+          <p>
+            * 4eafa55 Build the input component. * 630378f Build the buttons
+            component * 257c32b Correct spelling mistakes(from promary to
+            primary) * e8eefff Build the icons component * 50bcc1a Build the
+          </p>
+          <a href="#" class="link-arrow">learn more</a>
+        </div>
+        <picture data-aos="zoom-in-left">
+          <source
+            type="image/webp"
+            srcset="img/easy.webp 1x, img/easy@2x.webp 2x"
+          />
+          <source
+            type="image/jpg"
+            srcset="img/easy.jpg 1x, img/easy@2x.jpg 2x"
+          />
+          <img class="image" src="img/easy.jpg" alt="easy to use" />
+        </picture>
+      </article>
+      <article class="grid grid--1x2 features">
+        <div class="features__content" data-aos="fade-left">
+          <span class="icon-container">
+            <svg class="icon icon--primary">
+              <use href="img/sprite.svg#computer"></use>
+            </svg>
+          </span>
+          <h3 class="features__heading">Simply fast websites</h3>
+          <p>
+            * 4eafa55 Build the input component. * 630378f Build the buttons
+            component * 257c32b Correct spelling mistakes(from promary to
+            primary) * e8eefff Build the icons component * 50bcc1a Build the
+          </p>
+          <a href="#" class="link-arrow">learn more</a>
+        </div>
+        <picture data-aos="zoom-in-right">
+          <source
+            type="image/webp"
+            srcset="img/fast.webp 1x, img/fast@2x.webp 2x"
+          />
+          <source
+            type="image/jpg"
+            srcset="img/fast.jpg 1x, img/fast@2x.jpg 2x"
+          />
+          <img
+            class="image"
+            src="img/fast.jpg"
+            alt="the growing of server requset"
+          />
+        </picture>
+      </article>
+      <article class="grid grid--1x2 features">
+        <div class="features__content" data-aos="fade-right">
+          <span class="icon-container">
+            <svg class="icon icon--primary">
+              <use href="img/sprite.svg#settings"></use>
+            </svg>
+          </span>
+          <h3 class="features__heading">WordPress made easy</h3>
+          <p>
+            * 4eafa55 Build the input component. * 630378f Build the buttons
+            component * 257c32b Correct spelling mistakes(from promary to
+            primary) * e8eefff Build the icons component * 50bcc1a Build the
+          </p>
+          <a href="#" class="link-arrow">learn more</a>
+        </div>
+        <picture data-aos="zoom-in-left">
+          <source
+            type="image/webp"
+            srcset="img/wordpress.webp 1x, img/wordpress@2x.webp 2x"
+          />
+          <source
+            type="image/jpg"
+            srcset="img/wordpress.jpg 1x, img/wordpress@2x.jpg 2x"
+          />
+          <img class="image" src="img/wordpress.jpg" alt="wordpress" />
+        </picture>
+      </article>
+    </section>
+    <section class="block block--dark block--skewed-right block-showcase">
+      <header class="block__header">
+        <h2>User-Friendly Control Panel</h2>
+      </header>
+      <div class="container grid grid--1x2">
+        <picture class="block-showcase__image">
+          <source
+            type="image/webp"
+            srcset="img/ipad.webp 1x, img/ipad@2x.webp 2x"
+          />
+          <source
+            type="image/png"
+            srcset="img/ipad.png 1x, img/ipad@2x.png 2x"
+          />
+          <img src="img/ipad.png" alt="ipad screen" />
+        </picture>
+        <ul class="list" data-aos="fade-up">
+          <li class="list__item media">
+            <div class="media__image">
+              <svg class="icon icon--primary">
+                <use href="img/sprite.svg#snap"></use>
+              </svg>
+            </div>
+            <div class="media__body">
+              <h3 class="media__title">Easy Start & Managed Updates</h3>
+              <p>
+                * 4eafa55 Build the input component. * 630378f Build the buttons
+                component * 257c32b Correct spelling mistakes(from promary to
+                primary) * e8eefff Build the icons component
+              </p>
+            </div>
+          </li>
+          <li class="list__item media">
+            <div class="media__image">
+              <svg class="icon icon--primary">
+                <use href="img/sprite.svg#growth"></use>
+              </svg>
+            </div>
+            <div class="media__body">
+              <h3 class="media__title">Easy Start & Managed Updates</h3>
+              <p>
+                * 4eafa55 Build the input component. * 630378f Build the buttons
+                component * 257c32b Correct spelling mistakes(from promary to
+                primary) * e8eefff Build the icons component
+              </p>
+            </div>
+          </li>
+          <li class="list__item media">
+            <div class="media__image">
+              <svg class="icon icon--primary">
+                <use href="img/sprite.svg#computer"></use>
+              </svg>
+            </div>
+            <div class="media__body">
+              <h3 class="media__title">Easy Start & Managed Updates</h3>
+              <p>
+                * 4eafa55 Build the input component. * 630378f Build the buttons
+                component * 257c32b Correct spelling mistakes(from promary to
+                primary) * e8eefff Build the icons component
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="block container" data-aos="zoom-in">
+      <header class="block__header">
+        <h2>What our Customers are Saying</h2>
+        <p>
+          Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+          maecenas accumsan.
+        </p>
+      </header>
+      <div class="card testimonial">
+        <div class="grid grid--1x2 grid--align-center">
+          <!-- image -->
+          <div class="testimonial__image">
+            <img src="img/testimonial.jpg" alt="A happy, smiling customer." />
+            <span class="icon-container icon-container--accent">
+              <svg class="icon icon--white icon--small">
+                <use href="img/sprite.svg#quotes"></use>
+              </svg>
+            </span>
+          </div>
+          <!-- quote -->
+          <blockquote class="quote">
+            <p class="quote__text">
+              e8eefff Build the icons component * 50bcc1a Build the list
+              component * fd166ce Build the badges component * 61c0f48 Build
+              the[main 01d8c08] Build the grid component. 3 files changed, 29
+            </p>
+            <footer>
+              <div class="media">
+                <div class="media__image quote__line">
+                  <svg class="icon icon--primary">
+                    <use href="img/sprite.svg#line"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title quote__author">John Smith</h3>
+                  <p class="quote__company">ABC Company</p>
+                </div>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <section class="block block-callout">
+      <div class="container callout callout--primary">
+        <div class="grid grid--1x2">
+          <div class="callout__content">
+            <h2 class="callout__heading">Ready to Get Started?</h2>
+            <p class="callout__text">
+              main 4ae43b7] Build the testimonial component. 4 files changed,
+              103 insertions(+), 17 deletions(-) create mode 100644
+              components/testimonial.html
+            </p>
+          </div>
+          <a href="#" class="btn btn--secondary btn--stretched">Get Started</a>
+        </div>
+      </div>
+    </section>
     <footer class="block block--dark footer">
-      <!-- block--dark 里面有白色的字体 -->
+      <!-- 此处使用 block dark 类可以提供白色字体 -->
       <div class="container grid footer__sections">
         <section class="collapsible collapsible--expanded footer__section">
-          <header class="collapsible__header">
+          <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">products</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use xlink:href="img/sprite.svg#chevron"></use>
+              <use href="img/sprite.svg#chevron"></use>
             </svg>
-          </header>
+          </div>
           <div class="collapsible__content">
             <ul class="list">
               <li><a href="#">WordPress Hosting</a></li>
@@ -35,12 +393,12 @@
           </div>
         </section>
         <section class="collapsible footer__section">
-          <header class="collapsible__header">
+          <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">company</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use xlink:href="img/sprite.svg#chevron"></use>
+              <use href="img/sprite.svg#chevron"></use>
             </svg>
-          </header>
+          </div>
           <div class="collapsible__content">
             <ul class="list">
               <li><a href="#">About</a></li>
@@ -54,12 +412,12 @@
           </div>
         </section>
         <section class="collapsible footer__section">
-          <header class="collapsible__header">
+          <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">support</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use xlink:href="img/sprite.svg#chevron"></use>
+              <use href="img/sprite.svg#chevron"></use>
             </svg>
-          </header>
+          </div>
           <div class="collapsible__content">
             <ul class="list">
               <li><a href="#">Contact</a></li>
@@ -72,12 +430,12 @@
           </div>
         </section>
         <section class="collapsible footer__section">
-          <header class="collapsible__header">
+          <div class="collapsible__header">
             <h2 class="collapsible__heading footer__heading">domains</h2>
             <svg class="icon icon--white collapsible__chevron">
-              <use xlink:href="img/sprite.svg#chevron"></use>
+              <use href="img/sprite.svg#chevron"></use>
             </svg>
-          </header>
+          </div>
           <div class="collapsible__content">
             <ul class="list">
               <li><a href="#">Domain Checker</a></li>
@@ -88,11 +446,16 @@
             </ul>
           </div>
         </section>
-        <section class="footer__brand">
+        <div class="footer__brand">
           <img src="img/logo.svg" alt="logo" />
           <p class="footer__copyright">Copyright &copy; 2020 Mosh</p>
-        </section>
+        </div>
       </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
